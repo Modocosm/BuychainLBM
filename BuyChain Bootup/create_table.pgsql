@@ -1,4 +1,4 @@
-"CREATE TABLE IF NOT EXISTS"public"."pages" (
+CREATE TABLE IF NOT EXISTS "public"."pages" (
 	"id" uuid,
 	"sort" integer,
 	"user_created" uuid,
@@ -83,11 +83,12 @@ CREATE TABLE IF NOT EXISTS"public"."flex_hero" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"background_image" uuid ,
-	"image" uuid ,
-	"image_above" uuid ,
-	"title" varchar(255) ,
-	"content" text ,
+	"variant" varchar(255),
+	"background_image" uuid ,
+	"image" uuid,
+	"image_above" uuid,
+	"title" varchar(255),
+	"content" text,
 	"buttons" uuid,
     PRIMARY KEY ("id")
 );
@@ -97,11 +98,12 @@ CREATE TABLE IF NOT EXISTS"public"."overflow" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"background_image" uuid ,
-	"form_embed" UUID ,
-	"image_above" uuid ,
-	"title" varchar(255) ,
-	"content" text ,
+	"variant" varchar(255),
+	"background_image" uuid ,
+	"form_embed" UUID,
+	"image_above" uuid,
+	"title" varchar(255),
+	"content" text,
 	"buttons" uuid,
     PRIMARY KEY ("id")
 );
@@ -111,10 +113,11 @@ CREATE TABLE IF NOT EXISTS"public"."quote_slider_banner" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"background_image" uuid ,
-	"quote_rating" integer ,
-	"title" varchar(255) ,
-	"content" text ,
+	"variant" varchar(255),
+    "background_image" uuid,
+	"quote_rating" integer,
+	"title" varchar(255),
+	"content" text,
 	"attribution" varchar(255),
     PRIMARY KEY ("id")
 );
@@ -122,10 +125,7 @@ CREATE TABLE IF NOT EXISTS"public"."quote_list" (
 	"id" uuid,
 	"sort" integer,
 	"user_updated" uuid,
-	"date_updated" timestamp 
-
-
-,
+	"date_updated" timestamp,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."quote_object" (
@@ -136,11 +136,7 @@ CREATE TABLE IF NOT EXISTS"public"."quote_object" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"title" varchar(255),
-	"content" text 
-
-
-
-,
+	"content" text,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."editor_select" (
@@ -153,8 +149,7 @@ CREATE TABLE IF NOT EXISTS"public"."editor_select" (
 	"title" varchar(255),
 	"content" text,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255) ,
-	"content" text,
+	"variant" varchar(255),
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."dev_notes" (
@@ -177,13 +172,13 @@ CREATE TABLE IF NOT EXISTS"public"."content_pair" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"reverse" json ,
-	"image" uuid ,
-	"image_above" uuid ,
-	"title" varchar(255) ,
-	"content" text ,
-	"buttons" uuid ,
-,
+	"variant" varchar(255),
+  "reverse" json,
+	"image" uuid,
+	"image_above" uuid,
+	"title" varchar(255),
+	"content" text,
+	"buttons" uuid,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."content_pairs_list" (
@@ -194,7 +189,7 @@ CREATE TABLE IF NOT EXISTS"public"."content_pairs_list" (
 	"title" varchar(255),
 	"content" text,
 	"styleMods" json,
-	"variant" varchar(255) ,
+	"variant" varchar(255),
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."content_pairs_with_lists" (
@@ -203,11 +198,12 @@ CREATE TABLE IF NOT EXISTS"public"."content_pairs_with_lists" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"fontawesome_icon" varchar(255) ,
-	"title" varchar(255) ,
-	"content" text ,
-	"buttons" uuid ,
-	"fontawesome_icon" varchar(255) ,
+	"variant" varchar(255),
+    "fontawesome_icon" varchar(255),
+	"title" varchar(255),
+	"content" text,
+	"buttons" uuid,
+	"bullet_fontawesome_icon" varchar(255),
 	"text_list" json,
     PRIMARY KEY ("id")
 );
@@ -217,7 +213,8 @@ CREATE TABLE IF NOT EXISTS"public"."image_with_content_list" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"image" uuid,
+	"variant" varchar(255),
+	"image" uuid,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."flex_item_display" (
@@ -226,7 +223,8 @@ CREATE TABLE IF NOT EXISTS"public"."flex_item_display" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"flex_item" json,
+	"variant" varchar(255),
+	"flex_item" json,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."cta_with_form" (
@@ -235,7 +233,8 @@ CREATE TABLE IF NOT EXISTS"public"."cta_with_form" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255) ,
+	"variant" varchar(255),
+    "title" varchar(255) ,
 	"buttons" uuid,
     PRIMARY KEY ("id")
 );
@@ -245,10 +244,11 @@ CREATE TABLE IF NOT EXISTS"public"."basic_cta" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255) ,
-	"content" text ,
-	"buttons" uuid ,
-	"image" uuid ,
+	"variant" varchar(255),
+    "title" varchar(255) ,
+	"content" text,
+	"buttons" uuid,
+	"image" uuid,
 	"background_image" uuid,
     PRIMARY KEY ("id")
 );
@@ -271,9 +271,8 @@ CREATE TABLE IF NOT EXISTS"public"."recent_posts" (
 	"title" varchar(255),
 	"content" text,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255) ,
-	"number_of_posts" integer ,
-
+	"variant" varchar(255),
+	"number_of_posts" integer,
 	"buttons" uuid,
     PRIMARY KEY ("id")
 );
@@ -285,7 +284,7 @@ CREATE TABLE IF NOT EXISTS"public"."faq_section" (
 	"title" varchar(255),
 	"content" text,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255),
+	"variant" varchar(255),
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."faq_lis" (
@@ -305,9 +304,9 @@ CREATE TABLE IF NOT EXISTS"public"."faq_item" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"title" varchar(255),
-	"content" text 
+	"content" text,
 	"fontawesome_icon" varchar(255) ,
-	"question" text ,
+	"question" text,
 	"answer" text,
     PRIMARY KEY ("id")
 );
@@ -315,21 +314,21 @@ CREATE TABLE IF NOT EXISTS"public"."structure_picker" (
 	"id" uuid,
 	"sort" integer,
 	"user_updated" uuid,
-	"date_updated" timestamp ,
+	"date_updated" timestamp,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."mc_flex" (
 	"id" uuid,
 	"sort" integer,
 	"user_updated" uuid,
-	"date_updated" timestamp ,
+	"date_updated" timestamp,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."mc_grid" (
 	"id" uuid,
 	"sort" integer,
 	"user_updated" uuid,
-	"date_updated" timestamp ,
+	"date_updated" timestamp,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."mc_artisan_structures" (
@@ -338,7 +337,7 @@ CREATE TABLE IF NOT EXISTS"public"."mc_artisan_structures" (
 	"user_created" uuid,
 	"date_created" timestamp,
 	"user_updated" uuid,
-	"date_updated" timestamp ,
+	"date_updated" timestamp,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."basic_cta" (
@@ -347,10 +346,11 @@ CREATE TABLE IF NOT EXISTS"public"."basic_cta" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255) ,
-	"content" text ,
-	"buttons" uuid ,
-	"image" uuid ,
+	"variant" varchar(255),
+    "title" varchar(255),
+	"content" text,
+	"buttons" uuid,
+	"image" uuid,
 	"background_image" uuid,
     PRIMARY KEY ("id")
 );
@@ -360,7 +360,8 @@ CREATE TABLE IF NOT EXISTS"public"."card_list" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 	"title" varchar(255) ,
+	"variant" varchar(255),
+    "title" varchar(255),
 	"number_of_cards" integer,
     PRIMARY KEY ("id")
 );
@@ -379,8 +380,7 @@ CREATE TABLE IF NOT EXISTS"public"."card" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 
-
+	"variant" varchar(255),
 	"fontawesome_icon" varchar(255) ,
 	"title" varchar(255) ,
 	"content" text ,
@@ -389,8 +389,8 @@ CREATE TABLE IF NOT EXISTS"public"."card" (
 	"text_list" json ,
 	"buttons" uuid ,
 	"corner_image" uuid ,
-	"text_input" varchar(255) ,
-	"color" string,
+	"text_input" varchar(255),
+	"color" varchar(255),
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."content_block" (
@@ -400,8 +400,7 @@ CREATE TABLE IF NOT EXISTS"public"."content_block" (
 	"date_updated" timestamp,
 	"title" varchar(255),
 	"styleMods" json,
-	"variant" varchar(255) 
-	"title" varchar(255) ,
+	"variant" varchar(255),
 	"content" text ,
 	"image" uuid ,
 	"buttons" uuid,
@@ -413,10 +412,10 @@ CREATE TABLE IF NOT EXISTS"public"."button" (
 	"user_updated" uuid,
 	"date_updated" timestamp,
 	"styleMods" json,
-	"variant" varchar(255) 
-	"button_text" varchar(255) ,
-	"button_type" string ,
-	"fontawesome_icon" varchar(255) ,,
+	"variant" varchar(255),
+	"button_text" varchar(255),
+	"button_type" varchar(255),
+	"fontawesome_icon" varchar(255),
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."code_display_block" (
@@ -448,7 +447,8 @@ CREATE TABLE IF NOT EXISTS"public"."image_block" (
 	"title" varchar(255),
 	"content" text,
 	"styleMods" json,
-	"variant" varchar(255) 	"image" uuid,
+	"variant" varchar(255),
+    "image" uuid,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."animated_svg_block" (
@@ -459,7 +459,8 @@ CREATE TABLE IF NOT EXISTS"public"."animated_svg_block" (
 	"title" varchar(255),
 	"content" text,
 	"styleMods" json,
-	"variant" varchar(255) 	"image" uuid,
+	"variant" varchar(255),
+    "image" uuid,
     PRIMARY KEY ("id")
 );
 CREATE TABLE IF NOT EXISTS"public"."card_ribbon" (
