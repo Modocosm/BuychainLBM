@@ -680,7 +680,7 @@ CREATE TABLE IF NOT EXISTS"public"."card_ribbon" (
 	"date_updated" timestamp,
 	"styleMods" json,
 	"variant" varchar(255),
-    "🎨" uuid,   -- 🌉 IMAGE DUCK TAPE 🌉
+    "🏂" uuid,   -- 🏂 IMAGE DUCK TAPE 🏂
     "👾" uuid,   -- 👾 FOREIGN KEY DUCK TAPE 3 👾
     "🤖" uuid,   -- 🤖 FOREIGN KEY DUCK TAPE 2 🤖 
     "🦝" uuid,   -- 🦝 FOREIGN KEY DUCK TAPE 1 🦝 
