@@ -1,3 +1,11 @@
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile @ column/"dt_1"
+
+-- noinspection SqlResolveForFile @ column/"dt_2"
+
+-- noinspection SqlResolveForFile @ column/"dt_1"
+
 ALTER TABLE "public"."pages"
 ADD CONSTRAINT "pages_user_created_fKey"
 FOREIGN KEY ("user_created")
@@ -202,11 +210,6 @@ FOREIGN KEY ("user_updated")
 REFERENCES "public"."directus_users"("id")
 ON UPDATE NO ACTION ON DELETE NO ACTION;
 
-ALTER TABLE "public"."basic_cta"
-ADD CONSTRAINT "basic_cta_user_updated_fKey"
-FOREIGN KEY ("user_updated")
-REFERENCES "public"."directus_users"("id")
-ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 ALTER TABLE "public"."card_list"
 ADD CONSTRAINT "card_list_user_updated_fKey"
@@ -275,16 +278,16 @@ ALTER TABLE "public"."flex_hero"
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "flex_hero_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "public"."overflow"
 		ADD CONSTRAINT "overflow_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."form_embed_raw"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "overflow_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_2")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "public"."quote_slider_banner"
@@ -303,17 +306,17 @@ ALTER TABLE "public"."content_pair"
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "content_pair_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "content_pairs_list_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_2")
 			REFERENCES "public"."content_pair"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 ALTER TABLE "public"."content_pairs_with_lists"
 		ADD CONSTRAINT "content_pairs_with_lists_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "public"."image_with_content_list"
@@ -324,17 +327,13 @@ ALTER TABLE "public"."image_with_content_list"
 
 ALTER TABLE "public"."cta_with_form"
 		ADD CONSTRAINT "cta_with_form_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "public"."basic_cta"
 		ADD CONSTRAINT "basic_cta_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
-				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "basic_cta_background_image_fKey"
-		FOREIGN KEY ("background_image")
-			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "basic_cta_background_image_fKey"
 		FOREIGN KEY ("background_image")
@@ -343,46 +342,33 @@ ALTER TABLE "public"."basic_cta"
 
 ALTER TABLE "public"."recent_posts"
 		ADD CONSTRAINT "recent_posts_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 ALTER TABLE "public"."faq_lis"
 		ADD CONSTRAINT "faq_section_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."faq_lis"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "public"."faq_item"
 		ADD CONSTRAINT "faq_lis_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."faq_item"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
-ALTER TABLE "public"."basic_cta"
-		ADD CONSTRAINT "basic_cta_foreign_fKey"
-		FOREIGN KEY ("foreign")
-			REFERENCES "public"."button_list"("id")
-				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "basic_cta_background_image_fKey"
-		FOREIGN KEY ("background_image")
-			REFERENCES "public"."directus_files"("id")
-				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "basic_cta_background_image_fKey"
-		FOREIGN KEY ("background_image")
-			REFERENCES "public"."directus_files"("id")
-				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 ALTER TABLE "public"."card"
 		ADD CONSTRAINT "flex_card_display_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."card"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "card_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_2")
 			REFERENCES "public"."card_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "card_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_3")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "card_background_image_fKey"
@@ -392,7 +378,7 @@ ALTER TABLE "public"."card"
 
 ALTER TABLE "public"."content_block"
 		ADD CONSTRAINT "image_with_content_list_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."content_block"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "content_block_background_image_fKey"
@@ -400,13 +386,13 @@ ALTER TABLE "public"."content_block"
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 		ADD CONSTRAINT "content_block_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_2")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 ALTER TABLE "public"."button"
 		ADD CONSTRAINT "button_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
@@ -423,6 +409,6 @@ ALTER TABLE "public"."animated_svg_block"
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
 
 		ADD CONSTRAINT "quote_list_foreign_fKey"
-		FOREIGN KEY ("foreign")
+		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."quote_object"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
