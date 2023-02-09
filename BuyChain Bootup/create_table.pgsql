@@ -637,7 +637,7 @@ CREATE TABLE IF NOT EXISTS"public"."card_ribbon" (
 	"date_updated" timestamp,
 	"styleMods" json,
 	"variant" varchar(255),
-    "🏂" uuid,   -- 🏂 IMAGE DUCK TAPE 🏂
+    "🏂" uuid,      -- 🏂 IMAGE DUCK TAPE 🏂
     "dt_3" uuid,   -- dt_3 FOREIGN KEY DUCK TAPE 3 dt_3
     "dt_2" uuid,   -- dt_2 FOREIGN KEY DUCK TAPE 2 dt_2
     "dt_1" uuid,   -- dt_1 FOREIGN KEY DUCK TAPE 1 dt_1

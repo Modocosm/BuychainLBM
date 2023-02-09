@@ -1,4 +1,4 @@
-create table public."Modocosm_Core"
+create table public."theme_styles"
 (id                   uuid                                                                                                               not null primary key,
  status               varchar(255) default 'live'::character varying,
  fonts_computed       text         default '--font-900: var(--fw-bold) var(--font-size-900) / var(--font-lh-900) var(--font-body);
