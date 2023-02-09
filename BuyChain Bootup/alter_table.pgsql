@@ -282,11 +282,11 @@ ALTER TABLE "public"."flex_hero"
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
 ALTER TABLE "public"."overflow"
-		ADD CONSTRAINT "overflow_foreign_fKey"
+		ADD CONSTRAINT "overflow_form_foreign_fKey"
 		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."form_embed_raw"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "overflow_foreign_fKey"
+		ADD CONSTRAINT "overflow_button_foreign_fKey"
 		FOREIGN KEY ("dt_2")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
@@ -301,11 +301,11 @@ ALTER TABLE "public"."content_pair"
 		FOREIGN KEY ("image")
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "content_pair_image_fKey"
+		ADD CONSTRAINT "content_pair_image_above_fKey"
 		FOREIGN KEY ("image_above")
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "content_pair_foreign_fKey"
+		ADD CONSTRAINT "content_pair_button_foreign_fKey"
 		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
@@ -363,15 +363,15 @@ ALTER TABLE "public"."card"
 		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."card"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "card_foreign_fKey"
+		ADD CONSTRAINT "card_list_foreign_fKey"
 		FOREIGN KEY ("dt_2")
 			REFERENCES "public"."card_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "card_foreign_fKey"
+		ADD CONSTRAINT "card_button_foreign_fKey"
 		FOREIGN KEY ("dt_3")
 			REFERENCES "public"."button_list"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "card_background_image_fKey"
+		ADD CONSTRAINT "card_corner_image_fKey"
 		FOREIGN KEY ("corner_image")
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION;
@@ -381,7 +381,7 @@ ALTER TABLE "public"."content_block"
 		FOREIGN KEY ("dt_1")
 			REFERENCES "public"."content_block"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,
-		ADD CONSTRAINT "content_block_background_image_fKey"
+		ADD CONSTRAINT "content_block_image_fKey"
 		FOREIGN KEY ("image")
 			REFERENCES "public"."directus_files"("id")
 				ON UPDATE NO ACTION ON DELETE NO ACTION,

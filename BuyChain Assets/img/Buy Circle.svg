@@ -1,0 +1,7 @@
+<svg id="Buy_Circle" data-name="Buy Circle" xmlns="http://www.w3.org/2000/svg" width="461" height="460" viewBox="0 0 461 460">
+  <text id="Buy" transform="translate(231 247)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-47.16" y="0">Buy</tspan></text>
+  <g id="Ellipse_127" data-name="Ellipse 127" fill="none" stroke="#280071" stroke-width="8">
+    <ellipse cx="230.5" cy="230" rx="230.5" ry="230" stroke="none"/>
+    <ellipse cx="230.5" cy="230" rx="226.5" ry="226" fill="none"/>
+  </g>
+</svg>

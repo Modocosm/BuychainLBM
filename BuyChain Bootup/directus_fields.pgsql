@@ -1,4 +1,4 @@
-INSERT INTO "public"."directus_fields" 
+INSERT INTO "public"."directus_fields"
 	( collection,    field,    special,    interface,    "options",    display,    display_options,    readonly,    hidden,    sort,    width,    translations,    note,    conditions,    required,    "group",    validation,         validation_message)
 VALUES
 	('flex_hero',   'background_image',    'file',    'file-image',    NULL,    'image',    '{"circle":false}',    'false',    'false',    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
@@ -52,7 +52,7 @@ VALUES
 	('flex_card_display',    'cards',    'o2m',    'list-o2m',    '{"template":"{{id}}{{status}}{{title}}","limit":27,"enableLink":true}',    'related-values',    NULL,    'false',    'false',    NULL,    'full',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
 	('recent_posts',    'title',    NULL,    'input',    NULL,    'raw',    NULL,    'false',    'false',    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
 	('recent_posts',    'number_of_posts',    NULL,    'input',    NULL,    'raw',    NULL,    'false',    'false',    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
-	('recent_posts',    NULL,    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    'false',    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
+	('recent_posts',    'content',    NULL,    'text',    NULL,    NULL,    NULL,    'false',    'false',    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
 	('recent_posts',    'buttons',    'm2o',    'select-dropdown-m2o',    '{"iconLeft":"key","font":"monospace"}',    'raw',    NULL,    'TRUE',    'false',    NULL,    'half',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
 	('faq_section',    'title',    NULL,    'input',    NULL,    'raw',    NULL,    'false',    'false',    NULL,    NULL,    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
 	('faq_section',    'faq_list',    'o2m',    'list-o2m',    '{"template":"{{id}}{{status}}{{title}}","limit":27,"enableLink":true}',    'related-values',    NULL,    'false',    'false',    NULL,    'half',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),

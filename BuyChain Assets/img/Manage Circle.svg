@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="460" viewBox="0 0 460 460">
+  <g id="Manage_Circle" data-name="Manage Circle" transform="translate(0.267 -0.281)">
+    <text id="Manage" transform="translate(229.734 247.281)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-101.88" y="0">Manage</tspan></text>
+    <g id="Ellipse_126" data-name="Ellipse 126" transform="translate(-0.267 0.281)" fill="none" stroke="#280071" stroke-width="8">
+      <circle cx="230" cy="230" r="230" stroke="none"/>
+      <circle cx="230" cy="230" r="226" fill="none"/>
+    </g>
+  </g>
+</svg>

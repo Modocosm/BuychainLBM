@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="460" viewBox="0 0 460 460">
+  <g id="Sell_Circle" data-name="Sell Circle" transform="translate(-0.467)">
+    <text id="Sell" transform="translate(230.467 247)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-43.704" y="0">Sell</tspan></text>
+    <g id="Ellipse_125" data-name="Ellipse 125" transform="translate(0.467)" fill="none" stroke="#280071" stroke-width="8">
+      <circle cx="230" cy="230" r="230" stroke="none"/>
+      <circle cx="230" cy="230" r="226" fill="none"/>
+    </g>
+  </g>
+</svg>

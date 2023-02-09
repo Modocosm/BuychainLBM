@@ -474,7 +474,7 @@ CREATE TABLE IF NOT EXISTS"public"."basic_cta" (
   "title" varchar(255) ,
 	"content" text ,
 	"buttons" uuid ,
-	"image" uuid, 
+	"image" uuid,
     "dt_img" uuid,   -- dt_img IMAGE DUCK TAPE dt_img
     "dt_3" uuid,   -- dt_3 FOREIGN KEY DUCK TAPE 3 dt_3
     "dt_2" uuid,   -- dt_2 FOREIGN KEY DUCK TAPE 2 dt_2
