@@ -4,10 +4,12 @@ npm install pnpm -g
 pnpm install yarn
 yarn install directus
 
+# create
+directus.config.js  //starter variables
+package.json        //starter variables
+.env                //starter variables
+yarn.lock           //empty
 
-create package.json
-.env
-.yarn
-
+*** 
 
 yarn directus bootstrap
