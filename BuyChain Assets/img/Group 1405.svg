@@ -8,20 +8,20 @@
     <text id="Faster" transform="translate(1307 1911)" fill="#280071" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-38.808" y="0">Faster</tspan></text>
     <text id="Smarter" transform="translate(605 1911)" fill="#280071" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-50.772" y="0">Smarter</tspan></text>
     <text id="Unconstrained" transform="translate(961 1328)" fill="#280071" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-91.56" y="0">Unconstrained</tspan></text>
-    <g id="Sell_Circle" data-name="Sell Circle">
+    <g CLASS = "CIRCLE" id="Sell_Circle" data-name="Sell Circle">
       <g id="Ellipse_123" data-name="Ellipse 123" transform="translate(855 1353)" fill="#b4ecf0" stroke="#e9e5f1" stroke-width="8" opacity="0.4">
         <ellipse cx="269" cy="268.5" rx="269" ry="268.5" stroke="none"/>
         <ellipse cx="269" cy="268.5" rx="265" ry="264.5" fill="none"/>
       </g>
       <text id="Sell" transform="translate(1190 1605)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-43.704" y="0">Sell</tspan></text>
-      <g id="Ellipse_127" data-name="Ellipse 127" transform="translate(855 1353)" fill="none" stroke="#280071" stroke-width="8">
+      <g CLASS = "CIRCLE" id="Ellipse_127" data-name="Ellipse 127" transform="translate(855 1353)" fill="none" stroke="#280071" stroke-width="8">
         <ellipse cx="269" cy="268.5" rx="269" ry="268.5" stroke="none"/>
         <ellipse cx="269" cy="268.5" rx="265" ry="264.5" fill="none"/>
       </g>
     </g>
-    <g id="Manage_Circle" data-name="Manage Circle">
+    <g  CLASS = "CIRCLE" id="Manage_Circle" data-name="Manage Circle">
       <text id="Manage" transform="translate(960 2005)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-101.88" y="0">Manage</tspan></text>
-      <g id="Ellipse_125" data-name="Ellipse 125" transform="translate(692 1644)" fill="none" stroke="#280071" stroke-width="8">
+      <g CLASS = "CIRCLE" id="Ellipse_125" data-name="Ellipse 125" transform="translate(692 1644)" fill="none" stroke="#280071" stroke-width="8">
         <ellipse cx="269" cy="268.5" rx="269" ry="268.5" stroke="none"/>
         <ellipse cx="269" cy="268.5" rx="265" ry="264.5" fill="none"/>
       </g>
@@ -30,13 +30,13 @@
         <ellipse cx="269" cy="268.5" rx="265" ry="264.5" fill="none"/>
       </g>
     </g>
-    <g id="Buy_Circle" data-name="Buy Circle">
+    <g CLASS = "CIRCLE" id="Buy_Circle" data-name="Buy Circle">
       <g id="Ellipse_122" data-name="Ellipse 122" transform="translate(528 1353)" fill="#9ee5ff" stroke="#e9e5f1" stroke-width="8" opacity="0.4">
         <circle cx="268.5" cy="268.5" r="268.5" stroke="none"/>
         <circle cx="268.5" cy="268.5" r="264.5" fill="none"/>
       </g>
-      <text id="Buy" transform="translate(728 1605)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-47.16" y="0">Buy</tspan></text>
-      <g id="Ellipse_126" data-name="Ellipse 126" transform="translate(528 1353)" fill="none" stroke="#280071" stroke-width="8">
+      <text CLASS = "CIRCLE" id="Buy" transform="translate(728 1605)" fill="#280071" font-size="48" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-47.16" y="0">Buy</tspan></text>
+      <g CLASS = "CIRCLE" id="Ellipse_126" data-name="Ellipse 126" transform="translate(528 1353)" fill="none" stroke="#280071" stroke-width="8">
         <circle cx="268.5" cy="268.5" r="268.5" stroke="none"/>
         <circle cx="268.5" cy="268.5" r="264.5" fill="none"/>
       </g>
