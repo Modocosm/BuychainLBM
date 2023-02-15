@@ -1,15 +1,15 @@
-insert into public.basic_cta ( sort, styleMods, variant, title, content, buttons, image, background_image)
+insert into public.basic_cta ( sort, style_mods, variant, title, content, buttons, image, background_image)
 values  ( null, null, null, null, null, null, null, '763eca94-abe5-4074-a342-bdbbda7b23ca'),
         ( null, null, null, null, null, null, null, null),
         ( null, null, null, null, null, null, null, null);
 
 
-insert into public.button_list (id, sort, user_updated, date_updated, styleMods, variant)
-values  ('64b42494-a7bb-473e-8ee9-2d0f3d122d34', null, null, null, null, null),
-        ('ad5bfe27-b128-44ca-ae5b-abbfaec516c2', null, null, null, null, null),
-        ('08dab072-18b7-4c03-9e19-36bb7927103d', null, null, null, null, null);
+insert into public.button_list (id, sort, style_mods, variant)
+values  ('64b42494-a7bb-473e-8ee9-2d0f3d122d34', null, null, null),
+        ('ad5bfe27-b128-44ca-ae5b-abbfaec516c2', null, null, null),
+        ('08dab072-18b7-4c03-9e19-36bb7927103d', null, null, null);
 
-insert into public.button (id, sort, user_updated, date_updated, styleMods, button_text, button_type, fontawesome_icon, variant, parentList_id_fk)
+insert into public.button (id, sort, user_updated, date_updated, style_mods, button_text, button_type, fontawesome_icon, variant, parentList_id_fk)
 values  ('b036f8c5-e246-43ec-b469-ea84d624b6f6', null, null, null, null, 'Demo', null, null, null, null),
         ('43d52a09-849b-41be-aa85-7f65aed5dfca', 1, null, null, null, 'Learn More', null, null, null, null),
         ('0616a4d7-ab7e-4df7-9497-64311ed72b0d', 1, null, null, null, 'Learn More', null, null, null, 'ad5bfe27-b128-44ca-ae5b-abbfaec516c2'),
@@ -18,13 +18,13 @@ values  ('b036f8c5-e246-43ec-b469-ea84d624b6f6', null, null, null, null, 'Demo',
         ('c22097cf-6e44-4af7-a62c-21f3f99c0948', 2, null, null, null, null, 'external', null, null, '08dab072-18b7-4c03-9e19-36bb7927103d');
 
 
-insert into public.card (id, sort, user_updated, date_updated, styleMods, variant, title, content, sub_heading, fontawesome_bullet_icon, text_list, buttons, corner_image, text_input, color)
+insert into public.card (id, sort, user_updated, date_updated, style_mods, variant, title, content, sub_heading, fontawesome_bullet_icon, text_list, buttons, corner_image, text_input, color)
 values  ('60155eef-9407-4d5b-9900-c770e89a2464', null, null, null, null, null, 'Operations', '<p><strong><span style="font-weight: 400;">BuyChain&rsquo;s end-to-end platform connects and informs every aspect of your business. The system digitizes your operations, facilitates communication between departments and provides a holistic view of the entire enterprise.</span></strong></p>', 'Popular Features', '<i class="fa-solid fa-circle-check"></i>', '[{"bullett":"ERP (Enterprise Resource Planning)","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"CRM (Customer Relationship Management)","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"TSM (Transportation Management System)","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"eProcurement & eCommerce","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"}]', null, null, null, null),
         ('235cf528-881c-4cd8-8004-07bb0a3d346e', null, null, null, null, null, 'Capital', '<p><span style="font-weight: 400;">Constrained capital is a continual drag on growth. BuyChain Capital offers fully integrated working capital lines of credit with dynamic, AI driven risk management. This&nbsp; opens the door to exponential growth and greater revenue. </span></p>', 'Popular Features', '<i class="fa-solid fa-circle-check"></i>', '[{"bullett":"Working Capital","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Bank Integration","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Electronic Invoicing","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Digital Payments","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"}]', null, null, 'BETA', '#69B3E7'),
         ('2cacea34-10b1-4f20-ae6b-cc6634c0a139', null, null, null, null, null, 'Data Dashboard', '<p><span style="font-weight: 400;">We''ve developed a free data dashboard for the LBM industry. Data visualizations of key industry data points and news aggregation helps you zoom out so that you can have a better feel for how the market will move.</span></p>', 'Popular Features', '<i class="fa-solid fa-circle-check"></i>', '[{"bullett":"Lumber Futures","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Home Builder Sentiment","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Homes Sales","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"House Price Index","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"}]', null, null, 'FREE', '#B4ECF0');
 
 
-insert into public.content_block (id, sort, user_updated, date_updated, title, styleMods, variant, content, image, buttonlist)
+insert into public.content_block (id, sort, user_updated, date_updated, title, style_mods, variant, content, image, buttonlist)
 values  ('0a9cbb20-a3c4-46d4-bbdb-449a40ac8c81', null, null, null, 'Manage volatility and reduce risk', null, null, '<p><span style="font-weight: 400;">We have married technology with customer service in a way not previously known in our industry. The BuyChain system eliminates longtime, industry-wide constraints on profitability and growth with the tools, control, and data you need to gain a competitive edge.</span></p>', null, null),
         ('17c037c7-b4d7-466d-81ce-0af035759a3e', null, null, null, 'Are you able to move as fast as the market does?', null, null, '<p><span style="font-weight: 400;">We believe that your operational software should be a catalyst for growth - not a constraint. As you know, the LBM industry is fast paced, high volume, and low margin so, to stay ahead of your competitors and market shifts, you need to be able to buy and sell faster and smarter than the other guy. </span></p>', null, null),
         ('4268cc8d-26fa-4dc7-824e-dbd34199ec06', null, null, null, 'Your Growth Partners', null, null, '<p><span style="font-weight: 400;">We believe that one of the biggest gaps in the market is meaningful customer service. You know the drill -&nbsp; requests for support go unanswered and product upgrades and improvements are few and far between. We don&rsquo;t believe in the &ldquo;set it and forget it&rdquo; customer service model. Rather,&nbsp;</span></p>
@@ -33,7 +33,7 @@ values  ('0a9cbb20-a3c4-46d4-bbdb-449a40ac8c81', null, null, null, 'Manage volat
         ('9a180211-5cd3-4784-8d98-6b49d3afbd1b', null, null, null, 'Buy and sell faster and easier', null, null, '<p><span style="font-weight: 400;">BuyChain is the end-to-end supply chain management software for the LBM industry that unifies and mobilizes your team, sales, inventory, and banking in order to meet the demands of an increasingly volatile market.</span></p>', null, null);
 
 
-insert into public.content_pair (id, sort, user_updated, date_updated, styleMods, variant, reverse, image, image_above, title, content, section_buttons)
+insert into public.content_pair (id, sort, user_updated, date_updated, style_mods, variant, reverse, image, image_above, title, content, section_buttons)
 values  ('32f8d8d6-1289-4850-94ad-78562b00ae45', null, '80d14813-c5d4-40b7-a283-fc04a770409c', null, null, null, 'true', '443c7f31-3702-42ae-a70d-76ebcb02beb2', null, 'A centralized source of truth for your LBM business', '<p><span style="font-weight: 400;">Our software consolidates your business'' inventory, sales, and finances into one platform. With access to real-time data you can grow your market share while reducing risk by empowering your team to buy and sell faster and with fewer write-offs.</span></p>', null),
         ('aafb0a88-6c3f-400f-b96f-7d40906e78cd', null, null, null, null, null, 'true', '4f530139-1679-48eb-b222-62b96a6fd366', null, 'Buy', '<p><span style="font-weight: 400;">With BuyChain you can buy better. Our system gives your team greater insight into the&nbsp; market and current inventory, so that you can buy the right material at the right time. This translates to increased profit margin and inventory turns with lower credit and carry costs&nbsp; - giving you a competitive edge. </span></p>', null),
         ('0733aeaa-e7da-4209-8a4c-7f1c09d39999', null, null, null, null, null, 'true', 'bf25b529-aeab-423b-9399-c248023d5d22', null, 'Manage', '<p><span style="font-weight: 400;">Digitize your business and manage more with real-time data. BuyChain makes it easy for your team to get the answers they need when they need them. No more internal cross-checking. Fewer write-offs and errors. Quick and painless automated reporting. We help your team dramatically cut down on administrivia - leaving more time for sales and growth.&nbsp;</span></p>', null),
@@ -43,7 +43,7 @@ values  ('32f8d8d6-1289-4850-94ad-78562b00ae45', null, '80d14813-c5d4-40b7-a283-
         ('d01681a2-09c5-4195-a3e3-1348c401a7f6', null, '80d14813-c5d4-40b7-a283-fc04a770409c', null, null, null, 'true', '443c7f31-3702-42ae-a70d-76ebcb02beb2', null, 'More Money...  Fewer Problems! ', '<p><span style="font-weight: 400;">Constrained capital is a continual drag on growth. BuyChain Capital offers fully integrated working capital lines of credit with dynamic, AI driven risk management. This means that you have the ability to purchase materials based on availability and demand, which leads the way to exponential growth, and greater revenue and profit.&nbsp;</span></p>', '08dab072-18b7-4c03-9e19-36bb7927103d');
 
 
-insert into public.content_pairs_with_lists (id, sort, user_updated, date_updated, styleMods, variant, title, content, buttons, fontawesome_icon, text_list)
+insert into public.content_pairs_with_lists (id, sort, user_updated, date_updated, style_mods, variant, title, content, buttons, fontawesome_icon, text_list)
 values  ('7dc3a91d-c83d-4664-9a78-9d40e323c578', null, null, null, null, null, 'Inventory Management', '<p><span style="font-weight: 400;">Our system eliminates time now spent on internal cross-checking by providing all stakeholders real-time inventory data, informing both purchasing and sales on what to buy and what is available to sell.&nbsp;</span></p>', null, '<i class="fa-solid fa-warehouse"></i>', '[{"bullett":"Expedited sales workflow","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Increased inventory turns","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Lower carry costs","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Reduce back and forth"},{"bullett":"Fewer errors & write-offs","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Real-time inventory data","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Enables you to give Firm offers instead of subject prior pricing","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"}]'),
         ('3aabb1b4-82e7-4821-85a7-51cab39a6017', null, null, null, null, null, 'Risk Management', '<p><span style="font-weight: 400;">BuyChain can help your business turn risk management into a competitive advantage. Our system provides you with the ability to anticipate risk and put in place the mechanisms to mitigate it.</span></p>
 <p><span style="font-weight: 400;">Our AI helps you uncover trends and forecast more accurately to build an agile, resilient and low-risk supply chain network.</span></p>', null, '<i class="fa-solid fa-chess-knight"></i>', '[{"bullett":"Greater forecasting accuracy","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Responsive to market shifts","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Greater Market insight","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"Data driven decisions","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"},{"bullett":"More accurate forecasting","faicon":"<i class=\"fa-solid fa-circle-check\"></i>"}]'),
@@ -67,29 +67,29 @@ values  ('4731afbd-1bd3-45ce-bf3c-730b7ed13a96', null, '80d14813-c5d4-40b7-a283-
         ('f907c875-5e9c-4c1a-8063-d692c56268a8', null, '80d14813-c5d4-40b7-a283-fc04a770409c', '2023-02-14 18:01:06.286000 +00:00', '80d14813-c5d4-40b7-a283-fc04a770409c', null, 'FAQs', null, null, '<p><span style="font-weight: 400;">Does BuyChain work with existing systems?</span></p>', '<p><span style="font-weight: 400;">Not sure how to answer. Does it work with or simply replace?</span></p>');
 
 
-insert into public.flex_card_display (id, sort, user_updated, date_updated, title, content, styleMods, variant)
+insert into public.flex_card_display (id, sort, user_updated, date_updated, title, content, style_mods, variant)
 values  ('6b7568ea-341f-480c-8bcd-382504a67179', null, null, null, 'Replace your hammer with a nail gun.', null, null, null),
         ('7db4b99c-48e9-4e1f-9676-ebbd5854c5ee', -1, null, null, 'title sample', null, null, '2'),
         ('5e2312e8-82b2-44c2-bd6f-3a63bf1021e0', -1, null, null, 'title sample', null, null, '2');
 
 
-insert into public.flex_hero (id, sort, user_updated, date_updated, styleMods, variant, background_image, image, image_above, title, content, buttons)
+insert into public.flex_hero (id, sort, user_updated, date_updated, style_mods, variant, background_image, image, image_above, title, content, buttons)
 values  ('5b49aa23-e59b-47ef-ba1f-00505dbc16e4', null, '80d14813-c5d4-40b7-a283-fc04a770409c', null, null, null, '89d20ed0-cdde-4a39-acb5-3cd7355eafb4', 'ae5ff97b-bd8b-4dce-a6fc-5cda5fea77ed', null, 'Made For The Market', '<p><span style="font-weight: 400;">BuyChain is the end-to-end supply chain management software built for the LBM industry. We unify and mobilize your sales, inventory, and banking so that you can meet the demands of an increasingly volatile market.</span></p>', null),
         ('464c6e9c-3314-44cc-a3e9-11e7573b2c72', null, null, null, null, null, '89d20ed0-cdde-4a39-acb5-3cd7355eafb4', '06de386a-43d3-4f54-a9ec-597bd861bec8', null, 'We believe in a future where systems are the Catalyst for growth not the Constraint', null, null),
         ('49432741-c19e-4137-8a2f-710a3378c92b', null, null, null, null, null, null, 'ae5ff97b-bd8b-4dce-a6fc-5cda5fea77ed', null, 'Unified Operations', '<p><span style="font-weight: 400;">The market and the way we work has changed. BuyChain can help you gain a competitive edge in the age of consolidation and market volatility. Our holistic solutions bring together disparate and human-dependent data points into one centralized source of truth. Our dashboard and self-service customer portals enable you to make buying and selling decisions in real-time based on accurate data, rather than speculative, information. </span></p>', null),
         ('50a363ea-df74-435f-a973-8036dc71f1e7', null, null, null, null, null, '89d20ed0-cdde-4a39-acb5-3cd7355eafb4', 'dea96fb3-64b4-465f-9d1d-62de489e4255', null, 'LBM Finances Solutions', '<p><span style="font-weight: 400;">How much could your company grow with access to greater working capital and flexibility? With BuyChain capital solutions we don''t make you jump through hoops to get the cash you need to thrive. We are the first industry specific solution for the $750 Billion LBM industry - Basically a bank made just for you!</span></p>', null);
 
 
-insert into public.flex_item_display (id, sort, user_updated, date_updated, styleMods, variant, flex_item)
+insert into public.flex_item_display (id, sort, user_updated, date_updated, style_mods, variant, flex_item)
 values  ('9e3f75c2-3257-4712-a93d-e14b52479a0b', null, '80d14813-c5d4-40b7-a283-fc04a770409c', null, null, null, '[{"fontawesome_icon":"<i class=\"fa-solid fa-warehouse\"></i>","text":"Inventory Management"},{"fontawesome_icon":"<i class=\"fa-solid fa-chess-knight\"></i>","text":"Risk Management"},{"fontawesome_icon":"<i class=\"fa-thin fa-barcode\"></i>","text":"Order Management"},{"fontawesome_icon":"<i class=\"fa-solid fa-user-lock\"></i>","text":"User Permissions & Security"},{"fontawesome_icon":"<i class=\"fa-solid fa-cart-shopping\"></i>","text":"eProcurement & eCommerce"},{"fontawesome_icon":"<i class=\"fa-solid fa-comment-dollar\"></i>","text":"Sales Optimization"},{"fontawesome_icon":"<i class=\"fa-sharp fa-solid fa-file-chart-pie\"></i>","text":"Reporting & Analytics"},{"fontawesome_icon":"<i class=\"fa-solid fa-truck-fast\"></i>","text":"Shipping & Logistics"},{"fontawesome_icon":"<i class=\"fa-solid fa-users\"></i>","text":"Client & Account Management "},{"fontawesome_icon":"<i class=\"fa-solid fa-chart-line-up\"></i>","text":"Finance & Accounting"}]'),
         ('edbc534c-570e-4e56-bc8f-4691b506cfa0', null, null, null, null, null, '[{"fontawesome_icon":"<i class=\"fa-solid fa-money-bill\"></i>","text":"Working Capital"},{"fontawesome_icon":"<i class=\"fa-solid fa-landmark\"></i>","text":"Bank Integration"},{"fontawesome_icon":"<i class=\"fa-solid fa-file-invoice-dollar\"></i>","text":"Electronic Invoicing"},{"fontawesome_icon":"<i class=\"fa-solid fa-credit-card\"></i>","text":"Digital Payments"},{"fontawesome_icon":"<i class=\"fa-solid fa-triangle-exclamation\"></i>","text":"AI Powered Risk Management"}]');
 
 
-insert into public.image_with_content_list (id, sort, user_updated, date_updated, styleMods, image, variant)
+insert into public.image_with_content_list (id, sort, user_updated, date_updated, style_mods, image, variant)
 values  ('1ff25c9c-7889-4b37-9161-2408efc63114', null, null, null, null, null, null);
 
 
-insert into public.quote_slider_banner (id, sort, user_updated, date_updated, styleMods, variant, background_image, quote_rating, title, content, attribution)
+insert into public.quote_slider_banner (id, sort, user_updated, date_updated, style_mods, variant, background_image, quote_rating, title, content, attribution)
 values  ('7a9c2061-5df7-4882-8972-de91b5832f45', null, null, null, null, null, 'a5d6ddc8-d0a6-4241-97e7-f463e7adc2b8', 5, '“BuyChain has saved us 7 hours of admin work per week on contract to cash conversion for just one location’s inventory. That’s 364 hours back to sell more!”', null, 'Sean F. VP of Sales');
 
 
@@ -108,7 +108,7 @@ values  (1, '07b7c00b-7b3f-423a-bf05-0dce2686024f', '0a9cbb20-a3c4-46d4-bbdb-449
         (12, '07b7c00b-7b3f-423a-bf05-0dce2686024f', '936ad31c-4937-4165-80dc-fb96e3c9219e', 'basic_cta', 7);
 
 
-insert into public.pages (id, sort, user_created, date_created, user_updated, date_updated, title, faicon, slug, status, category, styleMods, variant, Hero)
+insert into public.pages (id, sort, user_created, date_created, user_updated, date_updated, title, faicon, slug, status, category, style_mods, variant, Hero)
 values  ('dc3a8cbe-0a6d-45c7-a885-1725a34f04e9', null, '80d14813-c5d4-40b7-a283-fc04a770409c', '2023-02-14 17:34:15.469000 +00:00', '80d14813-c5d4-40b7-a283-fc04a770409c', null, 'Solutions', null, 'solutions', 'draft', null, null, null, null),
         ('07b7c00b-7b3f-423a-bf05-0dce2686024f', -4, '80d14813-c5d4-40b7-a283-fc04a770409c', '2023-02-14 17:16:47.652000 +00:00', '80d14813-c5d4-40b7-a283-fc04a770409c', null, 'Home', null, 'home', 'draft', 'get-started', null, '1', null);
 
