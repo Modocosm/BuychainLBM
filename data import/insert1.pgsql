@@ -1,13 +1,17 @@
-insert into public.basic_cta ( sort, style_mods, variant, title, content, buttons, image, background_image)
-values  ( null, null, null, null, null, null, null, '763eca94-abe5-4074-a342-bdbbda7b23ca'),
-        ( null, null, null, null, null, null, null, null),
-        ( null, null, null, null, null, null, null, null);
+
+--- DATA FROM PREVIOUS VERSION ---
 
 
-insert into public.button_list (id, sort, style_mods, variant)
-values  ('64b42494-a7bb-473e-8ee9-2d0f3d122d34', null, null, null),
-        ('ad5bfe27-b128-44ca-ae5b-abbfaec516c2', null, null, null),
-        ('08dab072-18b7-4c03-9e19-36bb7927103d', null, null, null);
+insert into public.basic_cta (id, sort,  user_updated, date_updated, style_mods, variant, title, content, buttons, image, background_image)
+values  ('fabbcf0b-2079-401b-8362-72191c498d67', null, null, null, null, null, null, null, null, null, '763eca94-abe5-4074-a342-bdbbda7b23ca'),
+        ('16761ec7-2743-44f0-b127-f878ea9e42f1', null, null, null, null, null, null, null, null, null, null),
+        ('936ad31c-4937-4165-80dc-fb96e3c9219e', null, null, null, null, null, null, null, null, null, null);
+
+
+insert into public.button_list (id, sort, user_updated, date_updated, style_mods, variant)
+values  ('64b42494-a7bb-473e-8ee9-2d0f3d122d34', null, null, null, null, null),
+        ('ad5bfe27-b128-44ca-ae5b-abbfaec516c2', null, null, null, null, null),
+        ('08dab072-18b7-4c03-9e19-36bb7927103d', null, null, null, null, null);
 
 insert into public.button (id, sort, user_updated, date_updated, style_mods, button_text, button_type, fontawesome_icon, variant, parentList_id_fk)
 values  ('b036f8c5-e246-43ec-b469-ea84d624b6f6', null, null, null, null, 'Demo', null, null, null, null),
