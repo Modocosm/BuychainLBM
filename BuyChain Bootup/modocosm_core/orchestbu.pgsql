@@ -303,49 +303,128 @@ CREATE TABLE IF NOT EXISTS"public"."card_ribbon" (
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||ALTER TABLES QUERIES/ADD CONSTRAINTS||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-ALTER TABLE "public"."pages"                    ADD CONSTRAINT "pages_user_created_fKey"                     FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    ADD CONSTRAINT "pages_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."funnels"                  ADD CONSTRAINT "funnels_user_created_fKey"                   FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    ADD CONSTRAINT "funnels_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."articles"                 ADD CONSTRAINT "articles_user_created_fKey"                  FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    ADD CONSTRAINT "articles_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."guides"                   ADD CONSTRAINT "guides_user_created_fKey"                    FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    ADD CONSTRAINT "guides_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."dev_notes"                ADD CONSTRAINT "dev_notes_user_created_fKey"                 FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    ADD CONSTRAINT "dev_notes_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."mc_artisan_structures"    ADD CONSTRAINT "mc_artisan_structures_user_created_fKey"     FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    ADD CONSTRAINT "mc_artisan_structures_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE "public"."pages"                    
+ADD CONSTRAINT "pages_user_created_fKey"                     FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    
+ADD CONSTRAINT "pages_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."funnels"                  
+ADD CONSTRAINT "funnels_user_created_fKey"                   FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    
+ADD CONSTRAINT "funnels_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."articles"                 
+ADD CONSTRAINT "articles_user_created_fKey"                  FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    
+ADD CONSTRAINT "articles_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."guides"                   
+ADD CONSTRAINT "guides_user_created_fKey"                    FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    
+ADD CONSTRAINT "guides_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."dev_notes"                
+-- ADD CONSTRAINT "dev_notes_user_created_fKey"                 FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    
+-- ADD CONSTRAINT "dev_notes_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."mc_artisan_structures"    
+-- ADD CONSTRAINT "mc_artisan_structures_user_created_fKey"     FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,    
+-- ADD CONSTRAINT "mc_artisan_structures_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||ALTER TABLES QUERIES/ADD CONSTRAINTS 1||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-ALTER TABLE "public"."flex_hero"		ADD CONSTRAINT "flex_hero_image_fKey"		FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "flex_hero_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."overflow"		ADD CONSTRAINT "overflow_form_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."form_embed_raw"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "overflow_button_foreign_fKey"		FOREIGN KEY ("dt_2")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."quote_slider_banner"		ADD CONSTRAINT "quote_slider_banner_background_image_fKey"	FOREIGN KEY ("background_image")  REFERENCES "public"."directus_files"("id")		ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."content_pair"		ADD CONSTRAINT "content_pair_image_fKey"		            FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")			ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "content_pair_image_above_fKey"		        FOREIGN KEY ("image_above")		REFERENCES "public"."directus_files"("id")			ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "content_pair_button_foreign_fKey"		    FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "content_pairs_list_foreign_fKey"		    FOREIGN KEY ("dt_2")			REFERENCES "public"."content_pair"("id")			ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."content_pairs_with_lists"		ADD CONSTRAINT "content_pairs_with_lists_foreign_fKey"	    FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."image_with_content_list"		ADD CONSTRAINT "image_with_content_list_background_image_fKey"		FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."cta_with_form"		ADD CONSTRAINT "cta_with_form_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."basic_cta"		ADD CONSTRAINT "basic_cta_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "basic_cta_background_image_fKey"		FOREIGN KEY ("background_image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."recent_posts"		ADD CONSTRAINT "recent_posts_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."faq_list"		ADD CONSTRAINT "faq_section_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."faq_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."faq_item"		ADD CONSTRAINT "faq_list_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."faq_item"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."card"		ADD CONSTRAINT "flex_card_display_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."card"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "card_list_foreign_fKey"		FOREIGN KEY ("dt_2")			REFERENCES "public"."card_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "card_button_foreign_fKey"		FOREIGN KEY ("dt_3")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "card_corner_image_fKey"		FOREIGN KEY ("corner_image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."content_block"		ADD CONSTRAINT "image_with_content_list_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."content_block"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "content_block_image_fKey"		FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "content_block_foreign_fKey"		FOREIGN KEY ("dt_2")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."button"		ADD CONSTRAINT "button_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."image_block"		ADD CONSTRAINT "image_block_background_image_fKey"		FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
-ALTER TABLE "public"."animated_svg_block"		ADD CONSTRAINT "animated_svg_block_background_image_fKey"		FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		ADD CONSTRAINT "quote_list_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."quote_object"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE "public"."flex_hero"	            	
+ADD CONSTRAINT "flex_hero_image_fKey"		                        FOREIGN KEY ("image")		        	REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;		
+-- ADD CONSTRAINT "flex_hero_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."overflow"		              
+-- ADD CONSTRAINT "overflow_form_foreign_fKey"		                  FOREIGN KEY ("dt_1")		        	REFERENCES "public"."form_embed_raw"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		
+-- ADD CONSTRAINT "overflow_button_foreign_fKey"		FOREIGN KEY ("dt_2")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."quote_slider_banner"		  
+ADD CONSTRAINT "quote_slider_banner_background_image_fKey"	    FOREIGN KEY ("background_image")  REFERENCES "public"."directus_files"("id")		    ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."content_pair"	           	
+ADD CONSTRAINT "content_pair_image_fKey"		                    FOREIGN KEY ("image")			        REFERENCES "public"."directus_files"("id")		  	ON UPDATE NO ACTION ON DELETE NO ACTION,		
+ADD CONSTRAINT "content_pair_image_above_fKey"		        FOREIGN KEY ("image_above")		REFERENCES "public"."directus_files"("id")			ON UPDATE NO ACTION ON DELETE NO ACTION;		
+-- ADD CONSTRAINT "content_pair_button_foreign_fKey"		    FOREIGN KEY ("dt_1")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		
+-- ADD CONSTRAINT "content_pairs_list_foreign_fKey"		    FOREIGN KEY ("dt_2")			REFERENCES "public"."content_pair"("id")			ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."content_pairs_with_lists" 
+-- ADD CONSTRAINT "content_pairs_with_lists_foreign_fKey"	        FOREIGN KEY ("dt_1")		        	REFERENCES "public"."button_list"("id")			    	ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."image_with_content_list"	
+ADD CONSTRAINT "image_with_content_list_background_image_fKey"	FOREIGN KEY ("image")		        	REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."cta_with_form"		        
+-- ADD CONSTRAINT "cta_with_form_foreign_fKey"		                  FOREIGN KEY ("dt_1")	        		REFERENCES "public"."button_list"("id")			    	ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."basic_cta"	            	
+ADD CONSTRAINT "basic_cta_background_image_fKey"		FOREIGN KEY ("background_image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+-- ADD CONSTRAINT "basic_cta_foreign_fKey"		                      FOREIGN KEY ("dt_1")	        		REFERENCES "public"."button_list"("id")			    	ON UPDATE NO ACTION ON DELETE NO ACTION,		
+
+-- ALTER TABLE "public"."recent_posts"		          
+-- ADD CONSTRAINT "recent_posts_foreign_fKey"	                  	FOREIGN KEY ("dt_1")			        REFERENCES "public"."button_list"("id")			    	ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."faq_list"	              	
+-- ADD CONSTRAINT "faq_section_foreign_fKey"		                    FOREIGN KEY ("dt_1")			        REFERENCES "public"."faq_list"("id")				      ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."faq_item"	              	
+-- ADD CONSTRAINT "faq_list_foreign_fKey"		                      FOREIGN KEY ("dt_1")			        REFERENCES "public"."faq_item"("id")				      ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."card"	                   	
+ADD CONSTRAINT "card_corner_image_fKey"		FOREIGN KEY ("corner_image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+-- ADD CONSTRAINT "flex_card_display_foreign_fKey"	              	FOREIGN KEY ("dt_1")			        REFERENCES "public"."card"("id")				          ON UPDATE NO ACTION ON DELETE NO ACTION,		
+-- ADD CONSTRAINT "card_list_foreign_fKey"		FOREIGN KEY ("dt_2")			REFERENCES "public"."card_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		
+-- ADD CONSTRAINT "card_button_foreign_fKey"		FOREIGN KEY ("dt_3")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION,		
+
+ALTER TABLE "public"."content_block"	        	
+ADD CONSTRAINT "content_block_image_fKey"		FOREIGN KEY ("image")			REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;		
+-- ADD CONSTRAINT "image_with_content_list_foreign_fKey"	         	FOREIGN KEY ("dt_1")			        REFERENCES "public"."content_block"("id")				  ON UPDATE NO ACTION ON DELETE NO ACTION,		
+-- ADD CONSTRAINT "content_block_foreign_fKey"		FOREIGN KEY ("dt_2")			REFERENCES "public"."button_list"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+-- ALTER TABLE "public"."button"	                	
+-- ADD CONSTRAINT "button_foreign_fKey"	                        	FOREIGN KEY ("dt_1")			        REFERENCES "public"."button_list"("id")				    ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."image_block"	          	
+ADD CONSTRAINT "image_block_background_image_fKey"	          	FOREIGN KEY ("image")			        REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+ALTER TABLE "public"."animated_svg_block"		    
+ADD CONSTRAINT "animated_svg_block_background_image_fKey"	    	FOREIGN KEY ("image")			        REFERENCES "public"."directus_files"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
+-- ADD CONSTRAINT "quote_list_foreign_fKey"		FOREIGN KEY ("dt_1")			REFERENCES "public"."quote_object"("id")				ON UPDATE NO ACTION ON DELETE NO ACTION;
 
 
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||ALTER TABLES QUERIES/ADD CONSTRAINTS 2||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-alter table public.content_pair      add constraint "content_pair_img_fKey"          foreign key (image)   references public.directus_files;
-alter table public.basic_cta         add constraint "b_image_fKey"                   foreign key (image)   references public.directus_files;
-alter table public.basic_cta         add constraint "bcta_image_fKey"                foreign key (image)   references public.directus_files;
-alter table content_block            add constraint content_block_button_list_id_fk  foreign key (buttons) references button_list;
-alter table content_pair             add constraint content_pair_button_list_id_fk   foreign key (buttons) references button_list;
-alter table content_pairs_with_lists add constraint content_pair_button_list_id_fk   foreign key (buttons) references button_list;
-alter table cta_with_form            add constraint cta_button_list_id_fk            foreign key (buttons) references button_list;
-alter table flex_hero                add constraint flexhero_id_fk                   foreign key (buttons) references button_list;
-alter table overflow                 add constraint of_id_fk                         foreign key (buttons) references button_list;
-alter table recent_posts             add constraint rp_id_fk                         foreign key (buttons) references button_list;
+alter table public.content_pair      
+ADD CONSTRAINT "content_pair_img_fKey"          foreign key (image)   references public.directus_files;
+
+ALTER TABLE public.basic_cta         
+ADD CONSTRAINT "b_image_fKey"                   foreign key (image)   references public.directus_files;
+
+ALTER TABLE public.basic_cta         
+ADD CONSTRAINT "bcta_image_fKey"                foreign key (image)   references public.directus_files;
+
+ALTER TABLE content_block            
+ADD CONSTRAINT content_block_button_list_id_fk  foreign key (buttons) references button_list;
+
+ALTER TABLE content_pair             
+ADD CONSTRAINT content_pair_button_list_id_fk   foreign key (buttons) references button_list;
+
+ALTER TABLE content_pairs_with_lists 
+ADD CONSTRAINT content_pair_button_list_id_fk   foreign key (buttons) references button_list;
+
+ALTER TABLE cta_with_form            
+ADD CONSTRAINT cta_button_list_id_fk            foreign key (buttons) references button_list;
+
+ALTER TABLE flex_hero                
+ADD CONSTRAINT flexhero_id_fk                   foreign key (buttons) references button_list;
+
+ALTER TABLE overflow                 
+ADD CONSTRAINT of_id_fk                         foreign key (buttons) references button_list;
+
+ALTER TABLE recent_posts             
+ADD CONSTRAINT rp_id_fk                         foreign key (buttons) references button_list;
 
 
 
