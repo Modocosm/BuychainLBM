@@ -396,8 +396,8 @@ ADD CONSTRAINT "animated_svg_block_background_image_fKey"	    	FOREIGN KEY ("ima
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||ALTER TABLES QUERIES/ADD CONSTRAINTS 2||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-alter table public.content_pair      
-ADD CONSTRAINT "content_pair_img_fKey"          foreign key (image)   references public.directus_files;
+-- alter table public.content_pair      
+-- ADD CONSTRAINT "content_pair_img_fKey"          foreign key (image)   references public.directus_files;
 
 ALTER TABLE public.basic_cta         
 ADD CONSTRAINT "b_image_fKey"                   foreign key (image)   references public.directus_files;
