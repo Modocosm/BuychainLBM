@@ -103,11 +103,62 @@ VALUES
 --     btn_fkey uuid,
 --     PRIMARY KEY ("id")
 -- );
-
-
 -- ALTER TABLE "public"."button"
 -- ADD CONSTRAINT "button_foreign_fKey"	     	FOREIGN KEY ("btn_fkey")			        REFERENCES "public"."button_list"("id")				    ON UPDATE NO ACTION ON DELETE NO ACTION;
+-- ALTER TABLE "public"."button_list"
+-- ADD buttons_fkey uuid;
+-- ADD CONSTRAINT flexhero_id_fk                foreign key (buttons_fkey) references button_list;
 
-ALTER TABLE "public"."button_list"
-ADD buttons_fkey uuid;
-ADD CONSTRAINT flexhero_id_fk                foreign key (buttons_fkey) references button_list;
+
+
+create table if not exists public.button_list
+(
+    id         uuid not null,
+    sort       integer,
+    style_mods json,
+    variant    varchar(255)
+);
+
+alter table public.button_list
+    add constraint button_list_pkey
+        primary key (id);
+
+
+create table if not exists public.button
+(
+    id               uuid not null,
+    sort             integer,
+    style_mods       json,
+    button_text      varchar(255),
+    button_type      varchar(255),
+    fontawesome_icon varchar(255),
+    variant          varchar(255)
+);
+
+alter table public.button
+    add constraint button_pkey
+        primary key (id);
+
+
+
+
+insert into public.directus_fields (id, collection, field, special, interface, options, display, display_options, readonly, hidden, sort, width, translations, note, conditions, required, group, validation, validation_message)
+values  (487, 'button', 'parentlist', null, 'select-dropdown-m2o', null, null, null, false, true, null, 'full', null, null, null, false, null, null, null);
+insert into public.directus_fields (id, collection, field, special, interface, options, display, display_options, readonly, hidden, sort, width, translations, note, conditions, required, group, validation, validation_message)
+values  (249, 'button_list', 'style_mods', 'cast-json', 'tags', '{"iconLeft":"sell","alphabetize":true}', 'raw', '{"choices":null,"showAsDot":true}', false, false, 2, 'half', null, null, null, false, null, null, null);
+
+insert into public.directus_relations (id, many_collection, many_field, one_collection, one_field, one_collection_field, one_allowed_collections, junction_field, sort_field, one_deselect_action)
+values  (40, 'flex_hero', 'list', 'button_list', null, null, null, null, null, 'nullify');
+insert into public.directus_relations (id, many_collection, many_field, one_collection, one_field, one_collection_field, one_allowed_collections, junction_field, sort_field, one_deselect_action)
+values  (41, 'button', 'parentlist', 'button_list', 'itemstest', null, null, null, null, 'nullify');
+
+
+
+insert into public.directus_relations ( many_collection, many_field, one_collection, one_field, one_collection_field, one_allowed_collections, junction_field, sort_field, one_deselect_action)
+values  ( 'faq_item', 'faq_item_fkey', 'faq_list', 'faq_items', null, null, null, null, 'nullify');
+
+insert into public.directus_fields ( collection, field, special, interface, options, display, display_options, readonly, hidden, sort, width, translations, note, conditions, required, group, validation, validation_message)
+values  ( 'faq_list', 'faq_items', 'o2m', 'list-o2m', '{"enableSelect":false}', null, null, false, false, null, 'full', null, null, null, false, null, null, null);
+
+insert into public.directus_fields ( collection, field, special, interface, options, display, display_options, readonly, hidden, sort, width, translations, note, conditions, required, group, validation, validation_message)
+values  ( 'faq_item', 'faq_item_fkey', null, 'select-dropdown-m2o', null, null, null, false, true, null, 'full', null, null, null, false, null, null, null);

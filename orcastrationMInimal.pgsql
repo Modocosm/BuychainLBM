@@ -980,9 +980,11 @@ VALUES
     (   'pages_mc_slice_master', 'collection', null,     null,        null,     null,       null,             'false',      'true',     null,   'full',     null,           null,     null,         'false',      null,     null,        null                         ),
     (   'pages_mc_slice_master', 'id',         null,     null,        null,     null,       null,             'false',      'true',     null,   'full',     null,           null,     null,         'false',      null,     null,        null                         ),
     (   'pages_mc_slice_master', 'pages_id',   null,     null,        null,     null,       null,             'false',      'true',     null,   'full',     null,           null,     null,         'false',      null,     null,        null                         ),
-    (   'pages_mc_slice_master', 'sort',       null,     null,        null,     null,       null,             'false',      'true',     null,   'full',     null,           null,     null,         'false',      null,     null,        null                         ),
-    (   'pages', 'Hero', 'm2o', 'select-dropdown-m2o', '{"template":"{{title}}","filter":null}', 'related-values', null, 'false', 'false', null, 'full', null, null, '[{"options":{"enableCreate":true,"enableSelect":true,"template":"article"}}]', 'false', null, null, null); /*Fields */
+	  (   'pages_mc_slice_master', 'sort',       null,     null,        null,     null,       null,             'false',      'true',     null,   'full',     null,           null,     null,         'false',      null,     null,        null                         ),
+    (   'pages', 'hero', 'm2o', 'select-dropdown-m2o', NULL, NULL, NULL, 'f', 'f', NULL, 'full', NULL, NULL, NULL, 'f', NULL, NULL, NULL),
 
+    (   'pages', 'Hero', 'm2o', 'select-dropdown-m2o', '{"template":"{{title}}","filter":null}', 'related-values', null, 'false', 'false', null, 'full', null, null, '[{"options":{"enableCreate":true,"enableSelect":true,"template":"article"}}]', 'false', null, null, null); /*Fields */
+    
 
 insert into "public"."directus_relations"
 ("many_collection",                     "many_field",         "one_collection",           "one_field", "one_collection_field", "one_allowed_collections", "junction_field", "sort_field", "one_deselect_action")
@@ -1028,9 +1030,9 @@ values
 INSERT INTO public.directus_relations
 ( many_collection, many_field, one_collection, one_field, one_collection_field, one_allowed_collections, junction_field, sort_field, one_deselect_action)
 VALUES
--- ('pages_mc_slice_master', 'item', null, null, 'collection', 'animated_svg_block,basic_cta,content_pair,content_pairs_list,content_pairs_with_lists,dev_notes,editor_select,faq_section,flex_card_display,flex_hero,flex_item_display,form_embed_raw,image_block,image_with_content_list,overflow,quote_slider_banner,recent_posts,short_hero,content_block', 'pages_id', null, 'nullify'),
- ('pages', 'Hero', 'flex_hero', null, null, null, null, null, 'nullify'); /* Relations db order */
--- ('pages_mc_slice_master', 'pages_id', 'pages', 'mc_slice_master', null, null, 'item', 'sort', 'nullify');
+('pages_mc_slice_master', 'item', null, null, 'collection', 'animated_svg_block,basic_cta,content_pair,content_pairs_list,content_pairs_with_lists,dev_notes,editor_select,faq_section,flex_card_display,flex_hero,flex_item_display,form_embed_raw,image_block,image_with_content_list,overflow,quote_slider_banner,recent_posts,short_hero,content_block', 'pages_id', null, 'nullify'),
+ ('pages', 'Hero', 'flex_hero', null, null, null, null, null, 'nullify'), /* Relations db order */
+('pages_mc_slice_master', 'pages_id', 'pages', 'mc_slice_master', null, null, 'item', 'sort', 'nullify');
 
 
 
