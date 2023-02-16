@@ -1,0 +1,54 @@
+CREATE TABLE IF NOT EXISTS"public"."BOB"
+(
+ "id" uuid default gen_random_uuid() not null constraint cid primary key unique,
+ "sort"         integer,
+ "user_created" uuid,
+ "date_created" timestamptz,
+ "user_updated" uuid,
+ "date_updated" timestamptz,
+ "title"        varchar(255),
+ "faicon"       varchar(255),
+ "content"      text,
+ "slug"         varchar(255),
+ "status"       varchar(255) default 'draft'::character varying     not null,
+ "styleMods"    json,
+ "variant"      varchar(255),
+ "dt_img"       uuid,
+ "dt_3"         uuid,
+ "dt_2"         uuid,
+ "dt_1"         uuid
+);
+
+ALTER TABLE "public"."BOB"
+ADD CONSTRAINT "BOB_user_created_fKey"        FOREIGN KEY ("user_created")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION,
+ADD CONSTRAINT "BOB_user_updated_fKey"        FOREIGN KEY ("user_updated")     REFERENCES "public"."directus_users"("id")        ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+insert into directus_collections    (       collection,           icon,         note, display_template,   hidden,       singleton,translations,archive_field, archive_app_filter,archive_value,unarchive_value,sort_field,accountability,color,item_duplication_fields,sort,   "group",      collapse      )
+VALUES ('BOB',                  null,         null,        null,        'false',        'false',        null,        null,        'false',        null,        null,        null,        'all',        null,        null,        null,        null,        'open'       );
+
+INSERT INTO "public"."directus_fields"	( collection,    field,    special,    interface,    "options",    display,    display_options,    readonly,    hidden,    sort,    width,    translations,    note,    conditions,    required,    "group",    validation,         validation_message)
+    VALUES
+('BOB', 'id', 'uuid', 'input', '[{"iconLeft":"key","font":"monospace"}]', 'raw', NULL, 'true', 'false', '1', 'half', NULL, NULL, NULL, 'false', 'autogen', NULL, NULL),
+('BOB', 'sort', NULL, 'input', NULL, NULL, NULL, 'false', 'false', '2', 'half', '[{"language":"en-US","translation":"🔀"}]', NULL, NULL, 'false', 'autogen', NULL, NULL),
+('BOB', 'user_created', 'user-created', 'select-dropdown-m2o', '[{"template":"{{avatar.$thumbnail}} {{first_name}} {{last_name}}"}]', 'user', NULL, 'true', 'false', '3', 'half', '[{"language":"en-US","translation":"👩‍💻 User Created"}]', NULL, NULL, 'false', 'autogen', NULL, NULL),
+('BOB', 'date_created', 'date-created', 'datetime', NULL, 'datetime', '[{"relative":true}]', 'true', 'false', '4', 'half', '[{"language":"en-US","translation":"🎂 Date Created"}]', NULL, NULL, 'false', 'autogen', NULL, NULL),
+('BOB', 'user_updated', 'user-updated', 'select-dropdown-m2o', '[{"template":"{{avatar.$thumbnail}} {{first_name}} {{last_name}}"}]', 'user', NULL, 'true', 'false', '5', 'half', '[{"language":"en-US","translation":"👩‍💻 User Updated"}]', NULL, NULL, 'false', 'autogen', NULL, NULL),
+('BOB', 'date_updated', 'date_updated', 'datetime', NULL, 'datetime', '[{"relative":true}]', 'true', 'false', '6', 'half', '[{"language":"en-US","translation":"🎓 Date Updated"}]', NULL, NULL, 'false', 'autogen', NULL, NULL),
+('BOB', 'title', NULL, 'input', '[{"iconLeft":"title","trim":true}]', 'formatted-value', '[{"bold":true,"color":"#00478A","icon":"title","format":true}]', 'false', 'false', '1', 'half', NULL, NULL, NULL, 'true', 'top_level', NULL, NULL),
+('BOB', 'faicon', NULL, 'input', '[{"iconLeft":"content_paste_go","font":"monospace","trim":true,"placeholder":"<font-awesome-icon icon=\"fa-brands fa-github\" />"}]', 'icon', '[{"font":"monospace","filled":true,"color":"#D10000"}]', 'false', 'false', '2', 'half', NULL, '💯FONT AWESOME: Use the 3rd option on the HTML copy/paste "Vue"💯', NULL, 'false', 'top_level', NULL, NULL),
+('BOB', 'content', NULL, 'input-rich-text-html', NULL, 'raw', NULL, 'false', 'false', NULL, 'full', NULL, NULL, NULL, 'false', NULL, NULL, NULL),
+('BOB', 'slug', NULL, 'input', NULL, NULL, NULL, 'false', 'false', '3', 'half', NULL, NULL, NULL, 'false', 'top_level', NULL, NULL),
+('BOB', 'status', NULL, NULL, NULL, NULL, NULL, 'false', 'false', '4', 'half', NULL, NULL, NULL, 'true', 'top_level', NULL, NULL),
+('BOB', 'category', NULL, 'select-dropdown', '[{"choices":[{"text":"Get Started","value":"get-started"}],"icon":"text_format","allowOther":true,"allowNone":true}]', 'formatted-value', '[{"prefix":"https://buychain.co/","suffix":"/","format":true}]', 'false', 'false', '5', 'half', NULL, 'Slug: Editable After First save', NULL, 'false', 'top_level', NULL, NULL),
+('BOB', 'styleMods', 'cast-json', 'tags', '[{"iconLeft":"sell","alphabetize":true}]', 'raw', '[{"choices":null,"showAsDot":true}]', 'false', 'false', '1', 'half', NULL, NULL, NULL, 'false', 'customize', NULL, NULL),
+('BOB', 'dt_3',     'm2o',        'select-dropdown-m2o',    '[{"iconLeft":"key","font":"monospace"}]',    'raw',    NULL,    'false',    'false',    NULL,    'half',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
+('BOB', 'dt_2',     'm2o',        'select-dropdown-m2o',    '[{"iconLeft":"key","font":"monospace"}]',    'raw',    NULL,    'false',    'false',    NULL,    'half',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
+('BOB', 'dt_1',     'm2o',        'select-dropdown-m2o',    '[{"iconLeft":"key","font":"monospace"}]',    'raw',    NULL,    'false',    'false',    NULL,    'half',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
+('BOB', 'dt_img',   'file',       'file-image',    NULL,    'image',    '[{"circle":false}]',    'false',    'false',    NULL,    'half',    NULL,    NULL,    NULL,    'false',    NULL,    NULL,    NULL),
+('BOB', 'variant', NULL, 'select-dropdown', '[{"choices":[{"text":"alt1","value":"1"},{"text":"alt2","value":"2"}],"allowOther":true,"allowNone":true}]', NULL, NULL, 'false', 'false', '2', 'half', NULL, 'Add Classes to the component and notify tech', NULL, 'false', 'customize', NULL, NULL);
+
+
+insert into "public"."directus_relations"   ("many_collection",          "many_field",          "one_collection",         "one_field", "one_collection_field", "one_allowed_collections", "junction_field", "sort_field", "one_deselect_action"  )
+    values
+('BOB',                 'user_updated',        'directus_users',          NULL,         NULL,                  NULL,                        NULL,               NULL,      'nullify            '),
+ ('BOB',                 'user_updated',        'directus_users',          NULL,         NULL,                  NULL,                        NULL,               NULL,      'nullify            ');
