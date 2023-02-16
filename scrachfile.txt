@@ -1,0 +1,4 @@
+INSERT INTO public.directus_collections 
+(collection, icon, note, display_template, hidden, singleton, translations, archive_field, archive_app_filter, archive_value, unarchive_value, sort_field, accountability, color, item_duplication_fields, sort, "group", collapse) 
+VALUES 
+('pages_mc_slice_master', 'import_export', null, null, true, false, null, null, true, null, null, null, 'all', null, null, 1, 'pages', 'open');
